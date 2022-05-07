@@ -94,4 +94,4 @@ Methods:
 
 ## Preliminary result
 
-Stored in preliminary result directory. Most recent trained model is 'model_5' in the `prelim_model.tar.gz` file in the drive folder linked in result dir. Weights can be retrieved by loading model. To resume training, load model and train on data saved in `prelim_data.tar.gz`
+Stored in preliminary result directory. Most recent trained model is 'model_5' in the `prelim_model.tar.gz` file in the drive folder linked in result dir. Training history is stored in the log file - columns are training loss, training accuracy, validation loss, and validation accuracy. Weights can be retrieved by loading model. To resume training, load model and train on data saved in `prelim_data.tar.gz`
