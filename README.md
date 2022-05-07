@@ -10,7 +10,7 @@ Assuming runs are stored in directories named according to the BH spin, run `cre
 See `run_network` script for an example of how to use each module
 *Note*: change python path at top of script to run
 
-data.py: 
+`data.py`: 
 
 **PrepareData class:**
 
@@ -33,7 +33,7 @@ Future Edits:
 - line 111 makes train-test split using only parameters a, p, and e, edit input to include x as well 
 - `__p_cut__` method makes parameter cut using some criteria i honestly don't understand, edit method to change cut
 
-network.py
+`network.py`:
 
 **BuildNetwork class:**
 
@@ -73,7 +73,7 @@ Initialization Settings:
 See `run_rob_comparison` for example of how to use module
 *Note*: change python path at top of script to run
 
-compare_rob_waveforms.py:
+`compare_rob_waveforms.py`:
 
 **CompareRBWaveform class**
 
