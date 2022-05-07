@@ -94,7 +94,7 @@ class PrepareData:
             np.savetxt(self.path + self.fname + "_pars.dat", self.pars_all)
             np.savetxt(self.path + self.fname + "_modes.dat", self.modes_all)
 
-    def __u_transform(self, a, p, e, x=1.):
+    def u_transform(self, a, p, e, x=1.):
                 
         u_vals = np.array([])
         
@@ -172,7 +172,7 @@ class PrepareData:
         #self.__p_cut__()
 
         #convert p to u
-        u = self.__u_transform(self.pars_train[:, 0], self.pars_train[:, 1], self.pars_train[:, 2])
+        u = self.u_transform(self.pars_train[:, 0], self.pars_train[:, 1], self.pars_train[:, 2])
         self.input_train = np.c_[self.pars_train[:,0], u, self.pars_train[:, 2]]
         self.input_dim = self.input_train.shape[1]
 
