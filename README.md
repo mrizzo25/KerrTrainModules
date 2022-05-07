@@ -94,4 +94,4 @@ Methods:
 
 ## Preliminary result
 
-Stored in preliminary result directory. Most recent trained model is 'model_1' in the 'kerr_train_saved_model' dir. Weights can be retrieved by loading model. To resume training, load model and train on data saved in 'test' dir
+Stored in preliminary result directory. Most recent trained model is 'model_5' in the `prelim_model.tar.gz` file in the drive folder linked in result dir. Weights can be retrieved by loading model. To resume training, load model and train on data saved in `prelim_data.tar.gz`
