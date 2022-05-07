@@ -1,0 +1,25 @@
+#!/home/monica/miniconda3/envs/few_env/bin/python
+import network as nw
+import data 
+import matplotlib.pyplot as plt
+from tensorflow import keras
+
+
+infile = "Teuk_amps_a0.1-0.99_lmax_10_nmax_30.hdf5"
+
+#read in data, create reduced basis, and format input for nn
+dat = data.PrepareData(infile)
+
+#construct model
+net = nw.BuildNetwork(dat.input_dim, dat.output_dim)
+
+#train model
+tnet = nw.TrainNetwork(net.model, dat.input_train, dat.output_train)
+tnet.train_for_epoch(1000, 20, print_epoch=1)
+
+##load model and continue training
+#cont_model = keras.models.load_model("kerr_train_saved_model/model_4")
+
+#tnet_new = nw.TrainNetwork(cont_model, dat.input_train, dat.output_train)
+#tnet_new.update_learning_rate(1e-7)
+#tnet_new.train_for_epoch(500, 20, print_epoch=10)

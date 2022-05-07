@@ -1,0 +1,16 @@
+#!/home/monica/miniconda3/envs/few_env/bin/python
+from compare_rob_waveforms import CompareRBWaveform
+
+
+data_dir = "test/"
+prefix = "Teuk_amps_a0.1-0.99_lmax_10_nmax_30_prograde_"
+
+#a, p, e
+pars = [0.1, 8.5, 0.4]
+
+cbw = CompareRBWaveform(data_dir+prefix+"train_pars.dat", data_dir+prefix+"train_modes.dat", \
+            data_dir+prefix+"reduced_basis.dat", data_dir+prefix+"rb_alpha.dat", \
+            data_dir+prefix+"rb_indices.dat", pars)
+cbw.plot_wfs()
+
+print("Overlap:", cbw.compute_overlap())
