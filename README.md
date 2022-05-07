@@ -7,7 +7,7 @@ Assuming runs are stored in directories named according to the BH spin, run `cre
 
 ## Training NN
 
-See `run_network` script for an example of how to use each module
+See `run_network` script for an example of how to use each module       
 *Note*: change python path at top of script to run
 
 `data.py`: 
@@ -70,7 +70,7 @@ Initialization Settings:
 
 ## Visualizing reduced-order basis
 
-See `run_rob_comparison` for example of how to use module
+See `run_rob_comparison` for example of how to use module       
 *Note*: change python path at top of script to run
 
 `compare_rob_waveforms.py`:
