@@ -16,11 +16,11 @@ data.py:
 
 Settings:
 	
-`data_file`: name of hdf5 file where raw data is stored
-`prograde`: bool, use only prograde BH spins, or prograde & retrograde
-`save_tt`: save train and test data
-`rb_tolerance`: tolerance to use when generating reduced basis
-`test_fraction`: fraction of data to set aside for testing
+`data_file`: name of hdf5 file where raw data is stored     
+`prograde`: bool, use only prograde BH spins, or prograde & retrograde     
+`save_tt`: save train and test data        
+`rb_tolerance`: tolerance to use when generating reduced basis     
+`test_fraction`: fraction of data to set aside for testing      
 
 Outputs:
 
@@ -39,12 +39,12 @@ network.py
 
 Settings:
 
-`input_dim`: number of params
-`output_dim`: number of modes (in reduced basis)
-`max_pow`: maximum power of 2 used to set layer size
-`repeat_max`: number of times to repeat the largest layer
-`learning_rate`: initial learning rate for optimizer (not adaptive)
-`metrics`: metrics to output (probably only need accuracy for now)
+`input_dim`: number of params     
+`output_dim`: number of modes (in reduced basis)     
+`max_pow`: maximum power of 2 used to set layer size     
+`repeat_max`: number of times to repeat the largest layer      
+`learning_rate`: initial learning rate for optimizer (not adaptive)     
+`metrics`: metrics to output (probably only need accuracy for now)     
 
 Future Edits:
 
@@ -54,18 +54,18 @@ Future Edits:
 
 Initialization Settings:
 
-`model`: compiled keras model (loaded or created using BuildNetwork)
-`train_pars`: input data
-`train_modes`: output data
-`save_model`: save keras model or not (to continue training)
-`model_name`: string to identify specific model
+`model`: compiled keras model (loaded or created using BuildNetwork)     
+`train_pars`: input data     
+`train_modes`: output data      
+`save_model`: save keras model or not (to continue training)     
+`model_name`: string to identify specific model      
 
 `train_for_epoch` Settings:
 
-`max_epoch`: how many epochs to train for
-`valid_stop`: if loss gradient is increasing over the last 'valid_stop' epochs stop evaluating
-`batch_size`: size of each training batch
-`validation_split`: fraction of input data to set aside for validation
+`max_epoch`: how many epochs to train for    
+`valid_stop`: if loss gradient is increasing over the last 'valid_stop' epochs stop evaluating      
+`batch_size`: size of each training batch     
+`validation_split`: fraction of input data to set aside for validation    
 `print_epoch`: print information at this interval		
 
 ## Visualizing reduced-order basis
@@ -79,17 +79,17 @@ compare_rob_waveforms.py:
 
 Settings:
 
-`training_pars`: file containing training parameters 
-`training_modes`: file containing training modes
-`rb`: file containing reduced basis
-`rb_alpha`: file containing reduced basis alpha 
-`rb_indices`: file containing reduced basis indices 
-`param_list`: parameters to find wf for
+`training_pars`: file containing training parameters      
+`training_modes`: file containing training modes     
+`rb`: file containing reduced basis      
+`rb_alpha`: file containing reduced basis alpha      
+`rb_indices`: file containing reduced basis indices     
+`param_list`: parameters to find wf for      
 
 Methods:
 
-`plot_wfs(t_max=500, pts=5000)`: inputs are max time and number of pts
-`compute_overlap(t_max=500, pts=5000)`: same inputs as `plot_wfs` - use large t_max and pts to ensure enough resolution for accurate overlap
+`plot_wfs(t_max=500, pts=5000)`: inputs are max time and number of pts         
+`compute_overlap(t_max=500, pts=5000)`: same inputs as `plot_wfs` - use large t_max and pts to ensure enough resolution for accurate overlap        
 `basis_pt_plot()`: make 3D plot of points used in basis and save as html 		
 
 ## Preliminary result
