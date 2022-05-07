@@ -89,7 +89,7 @@ Settings:
 Methods:
 
 `plot_wfs(t_max=500, pts=5000)`: inputs are max time and number of pts         
-`compute_overlap(t_max=500, pts=5000)`: same inputs as `plot_wfs` - use large t_max and pts to ensure enough resolution for accurate overlap        
+`compute_overlap()`: compute overlap between real and approx waveform 
 `basis_pt_plot()`: make 3D plot of points used in basis and save as html 		
 
 ## Preliminary result
